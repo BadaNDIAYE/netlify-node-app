@@ -50,7 +50,9 @@
                 const x = -b / (2 * a);
                 result = `Il y a une solution unique: x = ${x.toFixed(2)}`;
             } else {
-                result = "Il n'y a pas de solutions réelles.";
+                const realPart = (-b / (2 * a)).toFixed(2);
+                const imaginaryPart = (Math.sqrt(-delta) / (2 * a)).toFixed(2);
+                result = `Les solutions complexes sont x1 = ${realPart} + ${imaginaryPart}i et x2 = ${realPart} - ${imaginaryPart}i`;
             }
 
             resultDiv.innerHTML = `<p>${result}</p>`;
