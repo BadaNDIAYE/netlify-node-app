@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netlify Node.js App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Netlify Node.js App</h1>
-    <p>If you see this page, the deployment was successful.</p>
-    <p> Bada viens de modifier </p>
-    <p> pour voir si les changements s'intèrent automatiquement </p>
+    <header>
+        <h1>Welcome to Netlify Node.js App</h1>
+    </header>
+    <section class="content">
+        <p>This page is more beautiful with animations and colors!</p>
+        <button id="animateBtn">Animate</button>
+    </section>
+    <footer>
+        <p>© 2024 Netlify Node.js App. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('animateBtn').addEventListener('click', () => {
+            document.querySelector('.content p').classList.toggle('animated');
+        });
+    </script>
 </body>
 </html>
