@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    background: linear-gradient(45deg, #6b6bff, #95f065);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -22,12 +22,31 @@ h1 {
 }
 
 .content {
-    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 button {
@@ -52,10 +71,6 @@ footer {
     bottom: 10px;
 }
 
-.animated {
-    animation: bounce 1s infinite;
-}
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -64,17 +79,5 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
     }
 }
